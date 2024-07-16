@@ -108,4 +108,18 @@ public class Tracker {
         }
         return result;
     }
+
+    /**
+     * Удаление заявки, найденной по id.
+     *
+     * @param id id искомой заявки.
+     */
+    public void delete(int id) {
+        int index = indexOf(id);
+        if (index != -1) {
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
+        }
+    }
 }
