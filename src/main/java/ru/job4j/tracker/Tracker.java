@@ -25,6 +25,23 @@ public class Tracker {
     private int size = 0;
 
     /**
+     * Возвращает index заявки по id.
+     *
+     * @param id аргумент для поиска заявки.
+     * @return индекс заявки в массиве.
+     */
+    private int indexOf(int id) {
+        int result = -1;
+        for (int index = 0; index < size; index++) {
+            if (items[index].getId() == id) {
+                result = index;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
      * Добавляет заявку, переданную в аргументах в массив заявок items.
      *
      * @param item заявка.
@@ -71,13 +88,23 @@ public class Tracker {
      * @return элемент массива заявок, соответствующий аргументу.
      */
     public Item findById(int id) {
-        Item result = null;
-        for (int index = 0; index < size; index++) {
-            Item item = items[index];
-            if (item.getId() == id) {
-                result = item;
-                break;
-            }
+        int index = indexOf(id);
+        return index != -1 ? items[index] : null;
+    }
+
+    /**
+     * Замена заявки, найденной по id, на новую.
+     *
+     * @param id   id искомой заявки.
+     * @param item новая заявка.
+     * @return true или false.
+     */
+    public boolean replace(int id, Item item) {
+        int index = indexOf(id);
+        boolean result = index != -1;
+        if (result) {
+            item.setId(id);
+            items[index] = item;
         }
         return result;
     }
