@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.output;
 
 /**
  * Интерфейс для замены вывода в консоль.
