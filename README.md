@@ -1,4 +1,4 @@
-# job4j_tracker &middot; ![CI GitHubAction](https://github.com/peterarsentev/job4j_tracker/actions/workflows/maven.yml/badge.svg)
+# job4j_tracker &middot; ![CI GitHubAction](https://github.com/peterarsentev/job4j_tracker/actions/workflows/maven.yml/badge.svg) ![release](https://img.shields.io/badge/Release-stable-brightgreen)
 
 Консольное приложение, которое хранит данные в формате "**Имя - Идентификатор(ID)**".
 
