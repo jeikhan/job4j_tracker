@@ -12,22 +12,24 @@
 
 ## Документация
 
-### Скачать приложение
+### Скачивание
 
-Чтобы скачать приложение необходимо перейти в [релизы](https://github.com/jeikhan/job4j/releases) и кликнуть последний релиз **tracker.jar**.
+Чтобы скачать исполняемый файл приложения необходимо перейти в [**Releases**](https://github.com/jeikhan/job4j/releases) и нажать на ссылку с последним релизом **tracker.jar**.
 
 ### Установка JRE
 
 Для запуска приложения необходимо установить среду выполнения для Java(JRE):
 
-- Скачать установщик `.exe` для **Windows**: [x32](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=250127_d8aa705069af427f9b83e66b34f5e380) / [x64](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=250129_d8aa705069af427f9b83e66b34f5e380)
+- Скачать установщик для **Windows**: [x32](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=250127_d8aa705069af427f9b83e66b34f5e380) / [x64](https://javadl.oracle.com/webapps/download/AutoDL?BundleId=250129_d8aa705069af427f9b83e66b34f5e380)
 - Установка через терминал **Linux**: `sudo apt install default-jre`
 
 ### Запуск приложения
 
-Чтобы запустить приложение необходимо открыть командную строку(Windows) или терминал(Linux) из папки со скаченным релизом и ввести команды для запуска:
-- Windows: `java -jar tracker.jar`
-- Linux: `java -jar tracker.jar`
+Чтобы запустить приложение необходимо открыть командную строку(Windows) или терминал(Linux) из папки со скаченным релизом и ввести команду для запуска:
+
+```
+java -jar tracker.jar
+```
 
 ## Задачи
 
