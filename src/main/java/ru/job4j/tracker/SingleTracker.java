@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.util.List;
+
 /**
  * Реализация методов класса Tracker через
  * шаблон Singleton.
@@ -8,8 +10,8 @@ package ru.job4j.tracker;
  * @since 03-Sep-24
  */
 public final class SingleTracker {
+    private final Tracker tracker = new Tracker();
     private static SingleTracker singleTracker;
-    private Tracker tracker = new Tracker();
 
     private SingleTracker() {
     }
@@ -25,23 +27,23 @@ public final class SingleTracker {
         return tracker.add(item);
     }
 
-    public Item[] findAll() {
+    public List<Item> findAll() {
         return tracker.findAll();
     }
 
-    public boolean replace(int id, Item newItem) {
-        return tracker.replace(id, newItem);
-    }
-
-    public void delete(int id) {
-        tracker.delete(id);
+    public List<Item> findByName(String key) {
+        return tracker.findByName(key);
     }
 
     public Item findById(int id) {
         return tracker.findById(id);
     }
 
-    public Item[] findByName(String key) {
-        return tracker.findByName(key);
+    public boolean replace(int id, Item updateItem) {
+        return tracker.replace(id, updateItem);
+    }
+
+    public void delete(int id) {
+        tracker.delete(id);
     }
 }
